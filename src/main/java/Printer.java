@@ -17,10 +17,11 @@ public class Printer {
     }
 
 
-    public void print(int pages, int copies){
+    public String print(int pages, int copies){
         if(this.paper >= pages * copies) {
             this.paper -= (pages * copies);
             this.toner -= (pages * copies);
-        }
+            return "Print Job Successful";
+        } return "Print Job Failed";
     }
 }

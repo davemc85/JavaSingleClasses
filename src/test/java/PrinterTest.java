@@ -5,7 +5,7 @@ import static org.junit.Assert.assertEquals;
 
 public class PrinterTest {
 
-    Printer printer;
+    private Printer printer;
 
     @Before
     public void before(){
@@ -35,9 +35,10 @@ public class PrinterTest {
     }
 
     @Test
-    public void testCannotPrint(){
+    public void testNoPrint(){
         printer.print(10,100);
-        assertEquals(250, printer.getPaper());
+//        assertEquals(250, printer.getPaper());
+        assertEquals("Print Job Failed", printer.print(10, 100));
     }
 
 
